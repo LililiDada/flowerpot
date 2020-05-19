@@ -1,0 +1,103 @@
+page {
+  background-color: #30bf6f;
+}
+
+.one {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 10rpx 0 30rpx;
+  height: 185rpx;
+  align-items: center;
+}
+
+.operate {
+  border-radius: 10rpx 0 0 10rpx;
+  height: 111rpx;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  width: 450rpx;
+  height: 185rpx;
+  /* line-height: 185rpx; */
+  background: #5571ad;
+  border-radius: 20rpx 0 0 20rpx;
+  color: #fff;
+  display: flex;
+  
+}
+
+.alter, .delet {
+  width: 70rpx;
+  height: 80rpx;
+  /* background: #7ee97e; */
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alter image, .delet image {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.line {
+  width: 50rpx;
+  height: 1rpx;
+  border-bottom: 2rpx solid rgba(255, 255, 255, 0.3);
+
+}
+.right{
+  position: relative;
+  width: 25%;
+}
+.float{
+  width: 55rpx;
+  position: absolute;
+  top:10rpx;
+  right: 15rpx;
+}
+.time{
+  position: absolute;
+  bottom: 5rpx;
+  right: 10rpx;
+  display: flex;
+  flex-direction: column;
+  font-family: '微软雅黑';
+  text-align: center;
+}
+.caption{
+  width: 75%;
+  position: relative;
+}
+.caption text{
+  position: absolute;
+ left:50%;
+ top:50%;
+ transform:translate(-50%,-50%);
+ font-size: 37rpx;
+ font-family: '微软雅黑';
+ font-weight: 600;
+}
+.btn{
+  position: fixed;
+  bottom: 80rpx;
+  left: 35rpx;
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  font-size: 120rpx;
+  background: #FF9966;
+  color: #fff;
+  box-shadow:2rpx 5rpx 5rpx rgb(247, 138, 84);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

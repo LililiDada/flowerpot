@@ -1,0 +1,57 @@
+<!--先静后动，先样式再数据-->
+<view class='container'>
+  <image class='head-image' src="{{postData.imgSrc}}"></image>
+  <!-- <image class='audio' catchtap='onMusicTap' src="{{isPlayingMusic?'/image/music/music-stop.png':'/image/music/music-start.png'}}" ></image> -->
+  <view class='author-date'>
+    <image class='avatar' src='{{postData.avatar}}'></image>
+    <text class='author'>{{postData.author}}</text>
+    <text class='const-text'>发表于</text>
+    <text class='date'>{{postData.date}}</text>
+  </view>
+  <text class='title'>{{postData.title}}</text>
+  <view class='tool'>
+    <view class='circle-img'>
+      <image wx:if="{{collected}}" catchtap='onCollectionTap' src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hzavjNrNKtlaaA6.png'></image>
+      <image wx:else catchtap='onCollectionTap' src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hzavjvKmFt9snLX.png'></image>
+      <image catchtap='onShareTap' class='share-img' src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hzfc5uXv1aOnwrb.png'></image>
+    </view>
+    <view class='horizon'></view>  <!--实现直线-->
+  </view>
+  <text class='detail'>{{postData.detail}}</text>
+</view>
+
+<view class='comment'>
+  <view class='replyUser' wx:for="{{commentList}}" wx:key="{{index}}" wx:for-item="comment" bindtouchstart="touchstar">
+    <view class="pinglun">
+      <image class='userImg' src='{{comment.avatar}}'></image>
+      <text class='userName'>{{comment.name}}</text>
+      <text class='comment_time'>{{comment.time}}</text>
+    </view>
+    <view class='comment_content' data-commentid='{{comment.id}}' data-name="{{comment.name}}" bindtap='getCommentUserID'>{{comment.content}}</view>
+    <image src="https://cloud-minapp-29237.cloud.ifanrusercontent.com/1i08rKS3fcBTA7qy.png" class="huifu_img" mode="widthFix" wx:if="{{replyList.length<0}}"></image>
+    <block wx:for="{{replyList}}" wx:key="{{index}}" wx:for-item="reply">
+      <view class="reply" wx:if="{{reply.parent_id==comment.id}}">
+        <image class='replyImg' src='{{reply.avatar}}'></image>
+        <view class="huifu">            
+          <text wx:if="{{reply.reply_name.length>0}}" class='reply_name'>{{reply.name}}回复{{reply.reply_name}}</text>
+          <!--这里是回复的名字-->
+          <text wx:else class='reply_name'>{{reply.name}}</text>
+          <view class='reply_content' data-commentid='{{comment.id}}' data-name='{{reply.name}}' bindtap='getReplyUserID'>{{reply.content}}</view>
+        </view> 
+        <text class='reply_time'>{{reply.time}}</text>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<view class="comment_bot">
+  <block wx:if="{{check}}">
+    <input class="comment_input" placeholder="我要评论" placeholder-style="text-align:center" type="text" bindinput="contentInp" value='{{contentInp}}'></input>
+    <button class="comment_btn" bindtap='addWant'>评论</button>
+  </block>
+  <block wx:else>
+    <input class='comment_input' type='text' placeholder='回复@{{reply_name||name}}' bindinput='replyInp' value='{{replyInp}}' focus='{{focus}}'></input>
+    <button class='comment_btn' bindtap='addWant'>评论</button>
+  </block>
+</view>

@@ -1,0 +1,30 @@
+<!--引用模板，相对路径和绝对路径均可用-->
+<import src="post-item/post-item-template.wxml" />
+
+
+<view>
+
+  
+  <scroll-view scroll-y enable-back-to-top='true' style="height:{{windowHeight}}px;"  bindscrolltolower='getMorePosts'>
+  <!-- catchtap='onSwiperTap'实现事件冒泡 -->
+  <swiper catchtap='onSwiperTap' indicator-dots='true' autoplay='true' interval='2000' circular="true">
+    <!--swiper-item无法设置宽高，其宽高固定为swiper的宽高，给图片设置宽高时，image和是wiper同时设置宽高-->
+    <swiper-item>
+      <image src='../../images/hua.jpg' data-item='item'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/hua.jpg' data-postId='item'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hzakI6uRFJG1SW6.png' data-postId='item'></image>
+    </swiper-item>
+  </swiper>
+
+    <block wx:for="{{postList}}" wx:for-item="item" wx:key=" ">
+      <view catchtap='onPostTap' data-item="{{item}}" data-index="{{index}}">
+        <template is="postItem" data="{{...item}}" />
+      </view>
+    </block>
+  </scroll-view>
+
+</view>

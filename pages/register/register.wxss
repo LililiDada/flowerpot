@@ -1,0 +1,50 @@
+page {
+  /* background: #30bf6f; */
+  /* color: white; */
+  /* font-family: "华文琥珀"; */
+}
+.tip_img{
+   position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.container {
+  margin-top: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100rpx 0;
+}
+.pot{
+  width: 200rpx;
+}
+.title {
+  margin: 50rpx 0;
+  font-weight: 800;
+  font-size: 40px;
+  color: #fff;
+}
+
+.loginbtn {
+  height: 100rpx;
+  width: 210px;
+ text-align: center;
+ line-height: 100rpx;
+  border: 0 solid #45ce81;
+  border-radius:35rpx;
+  background-color: #45ce81;
+  margin-top: 100rpx;
+  color: white
+
+}
+
+.loginbtn image {
+  width: 80px;
+  height: 80px;
+}
+
+.tip {
+  margin-top: 50rpx;
+  font-family: "微软雅黑";
+}

@@ -1,0 +1,101 @@
+<view class='one'>
+  <view class="para_big">
+    <view class="para_one ">
+      <text>当前参数</text>
+      <button class='auto_set' bindtap='autoSetTap'>自动设置参数</button>
+    </view>
+    <view class='current_big'>
+      <view class='current'>
+        <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVcO884qsjCFCu.png' class='para_img'></image>
+        <text class='current_key'>土壤阈值</text>
+        <text class='current_value'>{{auto_para.yuzhi}}%</text>
+      </view>
+      <view class='current'>
+        <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyG0cV9pRgf1poH.png' class='para_img'></image>
+        <text class='current_key'>土壤湿度</text>
+        <text class='current_value'>{{auto_para.tuhumi_Min}}%-{{auto_para.tuhumi_Max}}%</text>
+      </view>
+      <view class='current'>
+        <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVcOoTolxD2tsj.png' class='para_img'></image>
+        <text class='current_key'>空气温度</text>
+        <text class='current_value'>{{auto_para.temp_Min}}°C-{{auto_para.temp_Max}}°C</text>
+      </view>
+      <view class='current'>
+        <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyFwt8WslEzf9H7.png' class='para_img'></image>
+        <text class='current_key'>空气湿度</text>
+        <text class='current_value'>{{auto_para.humi_Min}}%-{{auto_para.humi_max}}%</text>
+      </view>
+    </view>
+  </view>
+  <view class="para_big reference">
+    <view class='para_one'>
+      <text>参数设置参考范围</text>
+      <picker mode='selector' range='{{range}}' bindchange='changeBreedTap'>
+        <button class='breed_opt'>品种选择</button>
+      </picker>
+    </view>
+    <view class='reference_body'>
+      <view class='reference_depict'>
+        <text class='reference_key'>植物喜好</text>
+        <text class='reference_value' decode="{{true}}">{{setrange.per}}</text>
+      </view>
+      <view class='reference_depict'>
+        <text class='reference_key'>土壤湿度</text>
+        <text class='reference_value'>{{setrange.tuhumi_Min}}-{{setrange.tuhumi_Max}}%</text>
+      </view>
+      <view class='reference_depict'>
+        <text class='reference_key'>空气温度</text>
+        <text class='reference_value'>{{setrange.temp_Min}}-{{setrange.temp_Max}}°C</text>
+      </view>
+      <view class='reference_depict'>
+        <text class='reference_key'>空气湿度</text>
+        <text class='reference_value'>{{setrange.humi_Min}}-{{setrange.humi_max}}%</text>
+      </view>
+    </view>
+  </view>
+  <view class="para_big parameter_site">
+    <text style='color:black'>参数设置</text>
+    <view class='site'>
+      <text>土壤阈值</text>
+      <view class='mat'>
+         <input value='' bindinput='getYuzhi'></input>%
+      </view>
+      <button class='determine' bindtap='setYuzhi'>确 定</button>
+    </view>
+    <view class='site'>
+      <text>土壤湿度</text>
+      <view class='mat_min'>
+        <input value='' bindinput='getTuhumiMin'></input>%
+      </view>
+      <text class='to'>-</text>
+      <view class='mat_max'>
+         <input value='' bindinput='getTuhumiMax'></input>%
+      </view>
+      <button class='determine' bindtap='setTuhumi'>确 定</button>
+    </view>
+    <view class='site'>
+      <text>空气温度</text>
+      <view  class='mat_min'>
+        <input value='' bindinput='getWenduMin'></input>°C
+      </view>
+      <text class='to'>-</text>
+      <view class='mat_max'>
+        <input value='' bindinput='getWenduMax'></input>°C
+      </view>
+      
+      <button class='determine' bindtap='setWendu'>确 定</button>
+    </view>
+    <view class='site'>
+      <text>空气湿度</text>
+      <view class='mat_min'>
+        <input value='' bindinput='getShiduMin'></input>%
+      </view>
+      <text class='to'>-</text>
+      <view class='mat_max'>
+         <input value='' bindinput='getShiduMax'></input>%
+      </view>
+     
+      <button class='determine' bindtap='setShidu'>确 定</button>
+    </view>
+  </view>
+</view>

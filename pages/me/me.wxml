@@ -1,0 +1,64 @@
+<view class='pot_msg'>
+
+  <view class='select' bindtap='replaceDevice' wx:if='{{onlineDevice}}'>选择其他设备</view>
+
+  <!-- 未登录 -->
+  <view wx:if='{{login}}' class='login'>
+    <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hvgmm6IsLvBd402.png' class='login_img' mode='widthFix'></image>
+    <button class='loginbtn' open-type='getUserInfo' bindgetuserinfo="bindgetUserInfo">一键授权登录</button>
+  </view>
+
+  <!-- 未添加设备 -->
+  <view class='exist_device' wx:if='{{existDevice}}'>
+    <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hvgmm6IsLvBd402.png' class='login_img' mode='widthFix'></image>
+   <view class='add_device' bindtap='addDeviceTap'>添加设备</view>
+</view>
+
+<!-- 显示设备 -->
+<view class='msg_img' wx:if='{{onlineDevice}}'>
+  <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyFuyVqZEfIVrGO.png' class='pot_img' mode='widthFix'></image>
+  <view class='msg'>
+    <view class='key'>
+      <text decode="{{true}}">昵&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称:</text>
+      <text>养花时长:</text>
+      <text>设备ID号:</text>
+    </view>
+    <view class='value'>
+      <text>{{deviceName}}</text>
+      <text>{{duration}}天</text>
+      <text>{{devIds}}</text>
+    </view>
+  </view>
+</view>
+
+</view>
+<view class='features'>
+  <view class='features_left'>
+    <view class='one_features' bindtap="exchangeTap">
+      <image class='features_img' src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyFqPPjHj73n1JF.png' mode='widthFix'></image>
+      <text>心得交流</text>
+    </view>
+    <view class='one_features' bindtap="into_posts">
+      <image class='features_img' src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyFqPbJAEGw5hST.png' mode='widthFix'></image>
+      <text>精美文章</text>
+    </view>
+    <view class='one_features last_one'>
+      <image class='features_img' src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyFqPDjurFhpR8B.png' mode='widthFix' style='width:85rpx;'></image>
+      <text>品种查询</text>
+    </view>
+  </view>
+  <view class='features_right'>
+    <view class='one_features' bindtap="consultTap">
+      <image class='features_img' src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyFqPJ1OVKdPZ8s.png' mode='widthFix'></image>
+      <text>专家咨询</text>
+    </view>
+    <view class='one_features'>
+      <image class='features_img' src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyFqPRYI3T6gaLI.png' mode='widthFix'></image>
+      <text>植物鉴别</text>
+    </view>
+    <view class='one_features last_one'>
+      <image class='features_img' src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyFqPWWL37ADDeA.png' mode='widthFix'></image>
+      <text>材料购买</text>
+    </view>
+  </view>
+</view>

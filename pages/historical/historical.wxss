@@ -1,0 +1,93 @@
+.select {
+  height: 180rpx;
+  background: #30bf6f;
+  padding: 20rpx 0 0 70rpx;
+  border-bottom-left-radius: 100rpx;
+}
+
+.select_text {
+  display: inline-block;
+  text-align: center;
+  width: 160rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50rpx;
+  margin-right: 20rpx;
+}
+
+.checked {
+  background: white;
+  color: #30bf6f;
+}
+
+.select_part {
+  margin: 35rpx 30rpx 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: space-between;
+}
+
+.particular {
+  padding-bottom: 10rpx;
+  color: white;
+  border-bottom: 1px solid #fff;
+}
+
+.chart {
+  width: 90%;
+  height: 550rpx;
+  background: white;
+  padding-top: 50rpx;
+  margin: 0 auto
+}
+
+.yangshi {
+  width: 100rpx;
+  height: 130rpx;
+  /* background: #30bf6f; */
+  position: absolute;
+  top: 650rpx;
+  z-index: -11;
+}
+
+.ec-canvas {
+  position: absolute;
+    width: 690rpx;
+  height: 500rpx;
+  right: 20rpx;
+    border-radius: 20rpx;
+  box-shadow: 4rpx 4rpx 10rpx #999;
+}
+
+.maximum {
+  /* height: 250rpx; */
+  padding: 20rpx 0rpx;
+  width: 90%;
+  display: flex;
+ border-radius: 25rpx;
+  box-shadow: 4rpx 4rpx 10rpx #999;
+  background: #30bf6f;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  margin: 0 auto;
+}
+
+.left,.mid,.right{
+  display: flex;
+ flex-direction: column;
+  align-items: center;
+}
+.left{
+  position: relative;
+  top: 25rpx;
+}
+.maximum text{
+  margin-top: 20rpx;
+}
+.pole{
+  font-size: 43rpx;
+  margin-top: 0
+}

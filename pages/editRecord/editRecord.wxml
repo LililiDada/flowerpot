@@ -1,0 +1,26 @@
+<view class="panel">
+  <textarea auto-height class="textarea" maxlength='1000' auto-focus='true' bindinput='getRecordTap' value="{{record}}"/>
+  <block wx:for="{{photoList}}" wx:key='{{item}}'>
+    <image src="{{item}}" mode="widthFix"></image>
+  </block>
+</view>
+<view class="keys">
+  <view class="one left_btn" bindtap="clearTap">
+    <view class="btn empty">
+      <image src="https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hvgdtAxTbe7YO2S.png" class="photo"></image>
+    </view>
+    <text>清空</text>
+  </view>
+  <!-- <view class="one picture" >
+    <view class="btn">
+      <image src="https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hvgcwQ2GsS3zH7t.png" class="photo"></image>
+    </view>
+    <text>照片</text>
+  </view> -->
+  <view class="one" bindtap="completeTap">
+    <view class="btn">
+      <image src="https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hvgdtJy4ev5PRFe.png" class="photo"></image>
+    </view>
+    <text>完成</text>
+  </view>
+</view>

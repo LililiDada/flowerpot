@@ -1,0 +1,31 @@
+<scroll-view scroll-y enable-back-to-top='true' style="height:1350rpx;" bindscrolltolower='getMoreDecord'>
+  <block wx:for='{{list}}' wx:key='item'>
+    <view class="one">
+      <view class="operate" bindtap='deletRecordTap' data-id="{{item.id}}" data-index="{{index}}">
+        <!-- <view class="alter">
+          <image src="../../images/编辑.png"></image>
+      </view> -->
+        <view class="line"></view>
+        <view class="delet">
+          <image src="../../images/删除.png"></image>
+        </view>
+        <view class="line"></view>
+      </view>
+      <view class="title" bindtap='detailRecordTap' data-id="{{item.id}}">
+        <view class="caption">
+          <text>{{item.caption}}</text>
+        </view>
+        <view class="right">
+          <image src="https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hvgliVO1FAX0C0o.png" class="float" mode='widthFix'></image>
+          <view class="time">
+            <text>TIME</text>
+            <text>{{item.time}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>
+<view class="btn" bindtap="skipTap">
+  +
+</view>

@@ -1,0 +1,106 @@
+<!--created 2019.05.08-->
+<image src='{{tipUrl}}' style='width:50rpx;position: absolute;left: 25rpx; top:15rpx;' mode='widthFix' bindtap='onlineTap' wx:if='{{tip}}'></image>
+<view class='weather'>
+  <view class='temperature'>
+    <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVRBcK9jb4TRFr.png' mode='widthFix'></image>
+    <text class='temp_data'>{{temperature}}</text>
+    <text> °C</text>
+  </view>
+  <text decode="{{true}}" class='date'>{{date}} &nbsp; {{week}}</text>
+</view>
+<view class='status'>
+  <scroll-view scroll-y style="height:840rpx;">
+
+    <view class='status_one'>
+      <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVTtoDdRRPBvSJ.png' class='status_icon' mode='widthFix'></image>
+      <view class='status_text'>
+        <text>环境</text>
+        <text class='fettle'>{{light_status}}</text>
+        <view class='yangshi'></view>
+      </view>
+    </view>
+    <view class='status_one'>
+      <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVTtX6R1RoUGD8.png' class='status_icon' mode='widthFix'></image>
+      <view class='status_text'>
+        <text>湿润等级</text>
+        <text class='fettle'>{{airquality}}</text>
+        <view class='yangshi'></view>
+      </view>
+    </view>
+    <view class="{{state?'earn':''}}">
+      <view class='status_one'>
+        <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVTtX6R1RoUGD8.png' class="status_icon" mode='widthFix'></image>
+        <view class='status_text'>
+          <text>水磊状态</text>
+          <view class="switch_btn {{waterState?'':'uncheck'}}" bindtap='waterStateTap'>{{water}}</view>
+          <image src='../../images/展开1.png' class="tip {{state&&'tip_slect'}}" bindtap='tipTap'></image>
+          <view class='yangshi'></view>
+        </view>
+      </view>
+      <view class="explain {{first_click?'show':'hide'}} {{state?'open':'close'}}">
+        <view class='mode_box'>
+          <text class='mode'>自动模式:</text>
+          <text>当花盆的土壤湿度低于阈值则自动开启，一旦达到达到植物适应生长的土壤湿度，水磊自动关闭。</text>
+        </view>
+        <view class='mode_box mode_else'>
+          <text class='mode'>手动模式:</text>
+          <text>开关直接控制水磊的开关，但为了保护植物，当土壤湿度达到自定义的最大值，水磊强制关闭。</text>
+        </view>
+      </view>
+    </view>
+    <view class="{{status?'earn':''}}">
+      <view class='status_one'>
+        <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVTtXZZ0FPMOS0.png' class='status_icon' mode='widthFix'></image>
+        <view class='status_text'>
+          <text>手动模式</text>
+        <view class="switch_btn {{automaticState?'':'uncheck'}}" bindtap='automaticStateTap'>{{automatic}}</view>
+          <image src='../../images/展开1.png' class="tip {{status&&'tip_slect'}}" bindtap='tipTaptwo'></image>
+          <view class='yangshi'></view>
+        </view>
+      </view>
+      <view class="explain {{firstclick?'show':'hide'}} {{status?'open':'close'}}">
+        <view class='mode_box'>
+          <text class='mode'>ON -> 自动模式:</text>
+          <text>软件自动设置参数，当土壤湿度达到自定义的最大值，水磊自动关闭。</text>
+        </view>
+        <view class='mode_box mode_else'>
+          <text class='mode'>OFF -> 手动模式:</text>
+          <text>用户自定义参数设置，但为了保护植物，当土壤湿度达到自定义的最大值，水磊强制关闭。</text>
+        </view>
+      </view>
+    </view>
+    <view class='status_one'>
+      <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVTtX6R1RoUGD8.png' class='status_icon' mode='widthFix'></image>
+      <view class='status_text'>
+        <text>空气湿度</text>
+        <text class='fettle'>{{shidu}}%</text>
+        <view class='yangshi'></view>
+      </view>
+    </view>
+    <view class='status_one'>
+      <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVTtztPx7yD0AD.png' class='status_icon' mode='widthFix'></image>
+      <view class='status_text'>
+        <text>土壤湿度</text>
+        <text class='fettle'>{{tuhumi}}%</text>
+        <view class='yangshi'></view>
+      </view>
+    </view>
+    <view class='status_one'>
+      <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVTtmOTAquRya7.png' class='status_icon' mode='widthFix'></image>
+      <view class='status_text'>
+        <text>光照强度</text>
+        <text class='fettle'>{{guangzhao}}lx</text>
+        <view class='yangshi'></view>
+      </view>
+    </view>
+    <view class='status_one'>
+      <image src='https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hyVTtnS2zRpaOxM.png' class='status_icon' mode='widthFix'></image>
+      <view class='status_text'>
+        <text>空气温度</text>
+        <text class='fettle'>{{wendu}}°C</text>
+        <view class='yangshi'></view>
+      </view>
+    </view>
+
+  </scroll-view>
+</view>

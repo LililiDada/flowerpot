@@ -1,0 +1,126 @@
+page{
+  background-color: #f7f7f7
+}
+.top{
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+  display: flex;
+}
+.caption{
+  width: 85%;
+  height: 130rpx;
+  background: #fff;
+  text-align: center;
+  position: relative;
+  /* border-bottom:1rpx solid #f7f7f7;  */
+}
+.date{
+  width: 15%;
+  height: 130rpx;
+  background: #30bf6f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* border: 1rpx solid #30bf6f; */
+}
+
+.day{
+  font-size: 45rpx;
+}
+.one_caption{
+  margin-left: 10rpx;
+  display: flex;
+  background: #fff
+}
+.left{
+  width: 15%;
+  background: #30bf6f;
+  position: relative;
+}
+.thing{
+  width: 85%;
+  background: #fff;
+  /* padding-left: 20rpx;
+  padding-top: 35rpx;  */
+  position: relative;
+}
+.append{
+  margin-left: 20rpx;
+  margin-top: 35rpx;
+
+}
+.bookmark{
+  width: 60rpx;
+  position: absolute;
+  bottom: -30rpx;
+  left: -15rpx;
+  z-index: 66;
+}
+.text{
+  display: block;
+  height: 88rpx;
+  padding: 10rpx 0;
+  border-bottom:2rpx solid #f7f7f7; 
+ 
+}
+
+.btn{
+  height: 90rpx;
+  width: 50%;
+  color: white;
+  background: #5571ad;
+  border-radius: 50rpx;
+  margin: 100rpx auto 0;
+  font-size:40rpx;
+  letter-spacing: 5rpx;
+  line-height: 90rpx;
+}
+.bookmark_bom{
+  bottom: 10rpx;
+}
+.record_sml{
+    margin-left: 10rpx;
+    display: flex;
+}
+.record_left{
+  width: 15%;
+  /* height: 100%; */
+  background: #30bf6f;
+}
+.record_right{
+  width: 85%;
+  background: #fff;
+  border-bottom: 2rpx solid #f7f7f7;
+}
+.record_right text{
+  display: block;
+  padding: 30rpx 10rpx 30rpx 30rpx;
+}
+.photo_right{
+  width: 85%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+.photo{
+  /* position: relative; */
+  /* display: inline-block; */
+  margin: 30rpx auto;
+  background: #fff;
+}
+.image{
+  width: 400rpx;
+  margin: auto;
+}
+.alter{
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 50rpx;
+  top:10rpx;
+}
+

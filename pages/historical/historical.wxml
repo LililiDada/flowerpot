@@ -1,0 +1,87 @@
+<image src='{{tipUrl}}' style='width:50rpx;position: absolute;right: 100rpx; top:15rpx;transform: rotateY(180deg); ' mode='widthFix' bindtap='onlineTap' wx:if='{{tip}}'></image>
+<view class='select'>
+  <view class='select_header'>
+    <!-- <text class='select_text checked'>本日</text>
+    <text class='select_text'>本月</text> -->
+    <text wx:for='{{daymonth}}' class="select_text {{currentTap==index?'checked':''}}" bindtap='navBarTap' data-index='{{index}}' wx:key='unique'>{{item}}</text>
+  </view>
+  <view class='select_part' hidden='{{currentTap!==0}}'>
+    <block wx:for='{{datastream_day}}' wx:key='unique'>
+      <text class="select_partone {{item.checked?'particular':''}}" bindtap='streamDayTap' data-id='{{item.id}}' data-index='{{index}}'>{{item.value}}</text>
+    </block>
+  </view>
+  <view class='select_part' hidden='{{currentTap!==1}}'>
+    <block wx:for='{{datastream_month}}' wx:key='unique'>
+      <text class="select_partone {{item.checked?'particular':''}}" bindtap='streamMonthTap' data-id='{{item.id}}' data-index='{{index}}'>{{item.value}}</text>
+    </block>
+  </view>
+</view>
+
+<view hidden='{{currentTap!==0}}'>
+  <block wx:for='{{datastream_day}}' wx:key='unique'>
+    <view class='chart' hidden='{{!item.checked}}'>
+      <ec-canvas id="{{item.chart}}" canvas-id="mychart_line" ec="{{item.ec}}" class="ec-canvas"> </ec-canvas>
+    </view>
+    <view class='maximum' hidden='{{!item.checked}}'>
+      <view class='left'>
+        <text>{{item.maximum.name}}</text>
+        <text>时间</text>
+      </view>
+      <view class='mid'>
+        <text class='pole' style='margin-top: 0'>最高值</text>
+        <text>{{item.maximum.max}}{{item.maximum.unit}}</text>
+        <text>{{item.maximum.maxTime}}</text>
+
+      </view>
+      <view class='right'>
+        <text class='pole' style='margin-top: 0'>最低值</text>
+        <text>{{item.maximum.min}}{{item.maximum.unit}}</text>
+        <text>{{item.maximum.minTime}}</text>
+      </view>
+    </view>
+  </block>
+
+</view>
+<view hidden='{{currentTap!==1}}'>
+  <block wx:for='{{datastream_month}}' wx:key='unique'>
+    <view class='chart' hidden='{{!item.checked}}'>
+      <ec-canvas id="{{item.chart}}" canvas-id="mychart_line" ec="{{item.ec}}" class="ec-canvas"> </ec-canvas>
+    </view>
+    <view class='maximum' hidden='{{!item.checked}}'>
+      <view class='left'>
+        <text>{{item.maximum.name}}</text>
+        <text>时间</text>
+
+      </view>
+      <view class='mid'>
+        <text class='pole' style='margin-top: 0'>最高值</text>
+        <text>{{item.maximum.max}}{{item.maximum.unit}}</text>
+        <text>{{item.maximum.maxTime}}</text>
+
+      </view>
+      <view class='right'>
+        <text class='pole' style='margin-top: 0'>最低值</text>
+        <text>{{item.maximum.min}}{{item.maximum.unit}}</text>
+        <text>{{item.maximum.minTime}}</text>
+      </view>
+    </view>
+  </block>
+</view>
+<!-- <view class='maximum'>
+  <view class='left'>
+    <text>湿度</text>
+    <text>时间</text>
+
+  </view>
+  <view class='mid'>
+    <text class='pole' style='margin-top: 0'>最高值</text>
+    <text>80%</text>
+    <text>00:00</text>
+
+  </view>
+  <view class='right'>
+    <text class='pole' style='margin-top: 0'>最低值</text>
+    <text>20%</text>
+    <text>15:00</text>
+  </view>
+</view> -->

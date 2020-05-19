@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{member}}" wx:key="" data-id="{{item.id}}" bindtap="into_chatRoom" data-name="{{item.name}}">
+    <view class="content">
+      <image src="{{item.avatar}}" class="avatar" mode='widthFix'></image>
+      <view class="list_text">
+        <text class="name">{{item.name}}</text>
+        <text class="word">{{item.word}}</text>
+      </view>
+      <view class="date">
+        <text class="small_date">{{item.time}}</text>
+        <!-- <text class="big_date">18/18/18</text> -->
+      </view>
+    </view>
+    <view class="del" catchtap="del" data-index="{{index}}" data-id="{{item.id}}">删除</view>
+  </view>
+</view>

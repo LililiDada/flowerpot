@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/alterDevice/alterDevice",
+    "pages/me/me",
+    "pages/posts/posts",
+    "pages/chat/chat",
+    "pages/revert/revert",
+    "pages/posts/post-detail/post-detail",
+    "pages/consult/consult",
+    "pages/exchange/exchange", 
+    "pages/detailRecord/detailRecord",
+    "pages/addRecord/addRecord",
+    "pages/editRecord/editRecord",
+    "pages/alterOneRecord/alterOneRecord",
+    "pages/detailDevice/detailDevice",
+    "pages/replaceDevice/replaceDevice",
+    "pages/parameter/parameter",
+    "pages/historical/historical",
+    "pages/addDevice/addDevice",
+    "pages/register/register"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#30bf6f",
+    "navigationBarTitleText": "花盆派",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#30bf6f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icon_s/shouye.png",
+        "selectedIconPath": "images/icon_i/shouye.png"
+      },
+      {
+        "pagePath": "pages/parameter/parameter",
+        "text": "参数设置",
+        "iconPath": "images/icon_s/shezhi.png",
+        "selectedIconPath": "images/icon_i/shezhi.png"
+      },
+      {
+        "pagePath": "pages/historical/historical",
+        "text": "历史记录",
+        "iconPath": "images/icon_s/lishijilu.png",
+        "selectedIconPath": "images/icon_i/lishijilu.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "images/icon_s/wode.png",
+        "selectedIconPath": "images/icon_i/wode.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取所在地天气"
+    }
+  },
+  "plugins": {
+    "sdkPlugin": {
+      "version": "2.3.0",
+      "provider": "wxc6b86e382a1e3294"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

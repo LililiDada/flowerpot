@@ -1,0 +1,70 @@
+.big{
+  border:4rpx solid #30bf6f;
+  color: #30bf6f;
+  /* margin-top: 120rpx; */
+  width: 80%;
+  margin: 0 auto 0;
+  border-radius: 90rpx 90rpx 10rpx 10rpx;
+  padding:60rpx 50rpx 30rpx;
+  /* box-shadow: 4rpx 4rpx 10rpx #ccc; */
+}
+.detail{
+  margin: 0 auto 30rpx;
+}
+.key{
+  /* color: rgb(78, 78, 78) */
+}
+.value{
+  padding-left:20rpx; 
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+.dele{
+  background: #30bf6f;
+  color: white;
+  border: 1rpx solid #fff;
+  width: 200rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  /* display: inline-block; */
+}
+.back{
+  width: 700rpx;
+  margin: 0 auto;
+}
+.detail_device{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      
+  margin-top:80rpx;
+}
+.btn_top{
+  display: flex;
+  justify-content: space-around;
+  margin:100rpx 140rpx 20rpx; 
+}
+.btn{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 50rpx;
+}
+.alter_btn{
+  width: 100rpx;
+  height: 100rpx;
+}
+.change_btn{
+  border: 4rpx solid #30bf6f;
+  color: #30bf6f;
+  width: 80%;
+  margin: 10rpx auto 0;
+  /* padding:20rpx 30rpx; */
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 15rpx;
+}

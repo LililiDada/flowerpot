@@ -1,0 +1,52 @@
+<view>
+  <view class="top">
+    <view class="date">
+      <text class="day">{{day}}</text>
+      <text>{{month}}月</text>
+      <image src="https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hvgh5t9LJYWdUAF.png" class="bookmark" mode='widthFix'></image>
+    </view>
+    <view class="caption">
+      <input type="text" placeholder="{{placeholder}}" class="text" bindinput="bindKeyInput" value="{{caption}}" />
+    </view>
+  </view>
+  <view class="record">
+    <block wx:for="{{recordList}}" wx:key='{{item}}'>
+      <view class="record_sml">
+        <view class="record_left">
+        </view>
+        <view class="record_right">
+          <text>{{index+1}}、{{item.record}}</text>
+          <image src="{{item.alter}}" class="alter" bindtap="alterRecordTap" data-record="{{item.record}}" data-index="{{index}}"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="add">
+    <view class="one_caption">
+      <view class="left">
+        <image src="https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hvgh5t9LJYWdUAF.png" class="bookmark bookmark_bom" mode='widthFix'></image>
+      </view>
+      <view class="thing">
+        <view class="append" bindtap="addRecordTap">
+          <text class="jia">+</text>
+          <text class="add_text">第{{rank}}件记录</text>
+        </view>
+        <view class="append add_img">
+          <view>
+            <text class="jia">+</text>
+            <text class="add_text" bindtap="getPhotoTap">添加图片({{imgLenght}}/4)</text>
+          </view>
+          <block wx:for='{{photoList}}' wx:key='{{index}}'>
+            <view class="photo">
+              <image src="{{item.delet}}" class="delet" bindtap="deleteImgTap" data-id='{{item.id}}' data-index='{{index}}'></image>
+              <image src="{{item.photo}}" class="image"></image>
+            </view>
+          </block>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <button class="btn" bindtap="complateTap" wx:if='{{addBtn}}'>完成</button>
+  <button class="btn" bindtap="alterTap" wx:if='{{alterBtn}}'>修改</button>
+</view>

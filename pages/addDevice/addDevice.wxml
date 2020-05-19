@@ -1,0 +1,29 @@
+<image src='{{backgroundUrl}}' style='width:{{imagewidth}}px;height:{{imageheight}}px' bindload='imageLoad' class='back'></image>
+<!-- <view style="background:url('{{backgroundUrl}}') no-repeat;background-size: 100% 100%; width:{{windowHeight}}px" class='back'> -->
+<view class='header'>
+  “ 添加设备 ”
+</view>
+<view class='dist_s'></view>
+<view class='big'>
+  <view class='one picker'>
+    <picker mode='selector' value="{{varietyindex}}" range="{{varietyList}}" bindchange='getChangeVariety'>
+      <view>
+        <label>品种:</label>{{varietyList[varietyindex]}}
+      </view>
+    </picker>
+  </view>
+  <view class='one'>
+    <label>名称:</label>
+    <input type='text' class='addipt' bindinput='getDeviceName' />
+  </view>
+  <view class='one'>
+    <label>ID号:</label>
+    <input type='number' class='addipt'  bindinput='getDeviceId' />
+  </view>
+  <view class='one'>
+    <label>api-key值:</label>
+    <input type='text' class='addipt'  bindinput='getDeviceKey' />
+  </view>
+</view>
+<button class='confirm' bindtap='addDeviceTap'>添加</button>
+<!-- </view> -->

@@ -1,0 +1,54 @@
+.add {
+  width: 250rpx;
+}
+.equipment {
+  margin-top: 20rpx;
+  color: #2f3236;
+  text-align: center;
+}
+.add_img{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  left: 0rpx;
+  right: 0;
+  margin: auto;
+  bottom:100rpx;
+  z-index: 22;
+}
+.one {
+  width: 250rpx;
+  height: 140rpx;
+  border-radius: 20rpx;
+  box-shadow: 4rpx 4rpx 10rpx #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30rpx 15rpx 0 30rpx;
+  color: #30bf6f;
+  font-size: 30rpx;
+  padding-bottom: 30rpx;
+  position: relative;
+}
+
+.pot {
+  width: 65rpx;
+}
+
+.name {
+  margin-top: 5rpx;
+}
+
+.device {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.select{
+  position: absolute;
+  bottom:-15rpx;
+   width: 50rpx;
+  height: 50rpx;
+}

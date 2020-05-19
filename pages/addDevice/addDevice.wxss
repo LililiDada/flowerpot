@@ -1,0 +1,74 @@
+.header{
+  width: 100%;
+  height: 50rpx;
+  background: #30bf6f;
+  overflow: hidden; 
+  color: white;
+  text-align: center;
+  font-family: '微软雅黑';
+  font-size: 40rpx;
+  z-index: 99
+}
+.dist_s{
+  /* width:100prx; */
+  height:100rpx;
+  border-radius: 50%;
+  background-color: #30bf6f;
+  /* margin-left:-224rpx;*/
+  position: relative;
+  /* margin-top:10rpx; */
+  top: -50rpx;
+  left: 0;
+  z-index: -1;
+}
+.back {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rpx 0 70rpx;
+}
+
+.picker {
+  height: 65rpx;
+}
+
+.picker label {
+  margin-right: 10rpx;
+}
+
+.one {
+  padding: 20rpx;
+  width: 85%;
+  display: flex;
+  /* border: 1rpx solid #30bf6f; */
+  border-bottom: 0.5rpx solid #ccc;
+  align-items: center;
+  color: rgb(131, 131, 131);
+  /* margin-top: 20rpx; */
+}
+label{
+   color: #30bf6f;
+}
+.addipt {
+  width: 400rpx;
+  height: 50rpx;
+  border-radius: 25rpx;
+  padding: 10rpx 20rpx;
+  /* margin-top: 15rpx; */
+}
+
+.confirm {
+  width: 400rpx;
+  height: 80rpx;
+  background: #30bf6f;
+  border: 1px solid #30bf6f;
+  border-radius: 30rpx;
+  color: white;
+  line-height: 75rpx;
+}

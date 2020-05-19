@@ -1,0 +1,48 @@
+page{
+  background: #f7f7f7
+}
+.panel{
+  width: 100%;
+  height: 400rpx;
+  background: #fff;
+  
+}
+.textarea{
+  background: #fff;
+  width: 95%;
+  margin: 30rpx;
+  /* line-height: 1.7em; */
+}
+.one{
+  display: inline-block;
+  text-align: center;
+  cursor:pointer;
+}
+.btn{
+  width: 100rpx;
+  height: 100rpx;
+  background: #5571ad;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+.left_btn{
+  margin-right: 90rpx;
+}
+.photo{
+  width: 50rpx;
+  height: 50rpx;
+}
+.empty{
+  background: #30bf6f;
+}
+.keys{
+  display: flex;
+  justify-content: center;
+  margin-top: 100rpx;
+}
+.picture{
+  margin: 0 80rpx;
+}

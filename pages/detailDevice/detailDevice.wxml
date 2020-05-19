@@ -1,0 +1,36 @@
+<view class="detail_device">
+  <image src="https://cloud-minapp-29237.cloud.ifanrusercontent.com/1hvgiFcTL2caZabU.png" class="back" mode='widthFix'></image>
+  <view class='big'>
+    <view class='detail'>
+      <text class='key'>设备名:</text>
+      <text class='value'>{{devicename}}</text>
+    </view>
+    <view class='detail'>
+      <text class='key'>品种:</text>
+      <text class='value'>{{variety}}</text>
+    </view>
+    <view class='detail'>
+      <text class='key'>设备ID:</text>
+      <text class='value'>{{deviceId}}</text>
+    </view>
+    <view class='detail'>
+      <text class='key'>apikey值:</text>
+      <text class='value'>{{apiKey}}</text>
+    </view>
+    <view class='detail'>
+      <text class='key'>创建时间:</text>
+      <text class='value'>{{startTime}}</text>
+    </view>
+  </view>
+</view>
+<view class="btn_top">
+  <view class='btn' bindtap="alterTap">
+      <image src="../../images/alter.png" class="alter_btn "></image>
+      <view class="comment">修改</view> 
+</view>
+<view class='btn' bindtap="deleteTap">
+      <image src="../../images/delete.png" class="alter_btn"></image>
+      <view class="comment">删除</view> 
+</view>
+</view>
+<view class="change_btn" bindtap="changeTap" wx:if='{{ifcurrent}}'> 更换此设备 </view> 

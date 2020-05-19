@@ -1,0 +1,142 @@
+page{
+  background-color: #f7f7f7
+}
+.top{
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+  display: flex;
+}
+.caption{
+  width: 85%;
+  height: 130rpx;
+  background: #fff;
+  text-align: center;
+  /* border-bottom:1rpx solid #f7f7f7;  */
+}
+.date{
+  width: 15%;
+  height: 130rpx;
+  background: #30bf6f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* border: 1rpx solid #30bf6f; */
+}
+
+.day{
+  font-size: 45rpx;
+}
+.one_caption{
+  height: 460rpx;
+  display: flex;
+  width: 100%;
+}
+.left{
+  width: 15%;
+  background: #30bf6f;
+  position: relative;
+}
+.thing{
+  width: 85%;
+  background: #fff;
+  /* padding-left: 20rpx;
+  padding-top: 35rpx;  */
+  position: relative;
+}
+.append{
+  margin-left: 20rpx;
+  margin-top: 35rpx;
+
+}
+.bookmark{
+  width: 60rpx;
+  position: absolute;
+  bottom: -30rpx;
+  left: -15rpx;
+  z-index: 66;
+}
+.add{
+  margin-left: 10rpx;
+}
+.text{
+  display: block;
+  height: 88rpx;
+  padding: 10rpx 0;
+  border-bottom:2rpx solid #f7f7f7; 
+ 
+}
+
+.add_text,.jia{
+  background: #5571ad;
+  color: white;
+  padding:5rpx 10rpx 5rpx 0;
+}
+.jia{
+  font-weight: 800;
+  padding:5rpx 0rpx;
+  padding-left: 10rpx
+}
+.add_img{
+  position: absolute;
+  top: 180rpx;
+}
+.btn{
+  height: 90rpx;
+  width: 50%;
+  color: white;
+  background: #5571ad;
+  border-radius: 50rpx;
+  margin: 100rpx auto 100rpx;
+  font-size:40rpx;
+  letter-spacing: 5rpx;
+  line-height: 90rpx;
+}
+.bookmark_bom{
+  bottom: 10rpx;
+}
+.record_sml{
+    margin-left: 10rpx;
+    display: flex;
+}
+.record_left{
+  width: 15%;
+  /* height: 100%; */
+  background: #30bf6f;
+}
+.record_right{
+  width: 85%;
+  background: #fff;
+  border-bottom: 2rpx solid #f7f7f7;
+  position: relative;
+}
+.alter{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top:30rpx;
+  right: 25rpx;
+}
+.record_right text{
+  display: block;
+  padding: 30rpx 40rpx 30rpx 30rpx;
+  line-height: 1.7em;
+}
+.photo{
+  position: relative;
+  display: inline-block;
+  margin: 30rpx 30rpx 0 0;
+}
+.image{
+  width: 110rpx;
+  height: 110rpx;
+}
+.delet{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top:-8rpx;
+  right: -10rpx;
+}

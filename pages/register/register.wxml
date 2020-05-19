@@ -1,0 +1,9 @@
+<image  class='tip_img'  src='{{backgroundUrl}}' style='width:{{imagewidth}}px;height:{{imageheight}}px' bindload='imageLoad'></image>
+<view class="container">
+  <text class='title' decode="{{true}}">花&nbsp;盆&nbsp;派</text> 
+  <image src='/images/pot.png' plain='true' class='pot' mode='widthFix'></image>
+  <button class='loginbtn' open-type='getUserInfo'  bindgetuserinfo="bindgetUserInfo">
+    <text class='tip'>微信一键授权登录</text>
+  </button>
+  
+</view>
